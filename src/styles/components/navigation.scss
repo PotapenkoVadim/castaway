@@ -1,0 +1,9 @@
+.navigation {
+  &__list { display: flex; gap: 40px; list-style: none; padding: 0;
+    &_col { flex-direction: column; gap: 10px; }
+  }
+  
+  &__link { text-decoration: none; color: $white; @include common-transition;
+    &:hover { color: $accent; }
+  }
+}

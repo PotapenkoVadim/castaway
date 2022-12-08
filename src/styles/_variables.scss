@@ -1,0 +1,21 @@
+/*/ colors /*/
+$background: #191919;
+$accent: #118DA8;
+$white: #FFFFFF;
+
+/*/ fonts /*/
+$font: 15px;
+
+/*/ displays /*/
+$tablet: 1024px;
+$mobile: 768px;
+
+/*/ mixin /*/
+@mixin container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@mixin common-transition {
+  transition: all 0.2s ease-in-out;
+}
