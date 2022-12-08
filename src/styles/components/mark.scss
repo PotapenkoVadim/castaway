@@ -1,0 +1,9 @@
+.mark {
+  &_bold { font-weight: 600; font-size: 5rem; letter-spacing: 1px; }
+
+  &_underline { position: relative;
+    &::after { content: ''; position: absolute; bottom: -16px; left: 0; width: 160px; height: 104px;
+      background-image: url('../static/images/underline.svg'); @include common-background-image;
+    }
+  }
+}
