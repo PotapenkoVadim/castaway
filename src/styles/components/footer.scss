@@ -1,0 +1,23 @@
+.footer { display: flex; align-items: flex-start; justify-content: space-between; font-size: 1.13rem;
+  padding-bottom: 125px;
+  &__logo { width: 220px; height: 45px; }
+  &__poster { display: block; object-fit: contain; }
+  &__social { display: flex; gap: 17px; margin: 25px 0; }
+  &__left-col { flex: 1; width: 100%; }
+  &__right-col { flex: 2; padding: 0 65px; display: flex; align-items: flex-start; justify-content: space-between; width: 100%;
+    position: relative;
+  }
+
+  @media (max-width: $tablet) { padding-bottom: 45px;
+    &__right-col { padding: 0; }
+  }
+
+  @media (max-width: $mobile) { flex-direction: column;
+    &__left-col { display: flex; align-items: center; justify-content: space-between; margin-bottom: 60px; }
+    &__services { position: absolute; top: -55px; left: 0; }
+  }
+
+  @media (max-width: $mobile-small) {
+    &__left-col { display: block; }
+  }
+}

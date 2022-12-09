@@ -1,4 +1,4 @@
-.review { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 200px;
+.review { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 110px;
   &__item {background-color: $black; border-radius: 32px; padding: 55px 45px; }
   &__rate { display: flex; gap: 5px; }
   &__text { margin: 20px 0; font-size: 2.4rem; }

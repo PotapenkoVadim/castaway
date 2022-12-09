@@ -9,6 +9,9 @@
   &__close { mask-image: url(../static/images/close.svg); }
   &__menu { mask-image: url(../static/images/menu.svg); }
   &__arrow { mask-image: url(../static/images/arrow.svg); width: 70px; height: 38px; }
+  &__twitter { mask-image: url(../static/images/twitter.svg); width: 24px; height: 24px; }
+  &__facebook { mask-image: url(../static/images/facebook.svg); width: 24px; height: 24px; }
+  &__instagram { mask-image: url(../static/images/instagram.svg); width: 24px; height: 24px; }
 
   &_white { background-color: $white; }
   &_black { background-color: $black; }

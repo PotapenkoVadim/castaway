@@ -6,4 +6,6 @@
   &__link { text-decoration: none; color: $white; @include common-transition; font-size: 1.13rem;
     &:hover { color: $accent; }
   }
+
+  &_column-direction &__list { flex-direction: column; gap: 10px; }
 }
