@@ -1,0 +1,22 @@
+.about { display: flex; align-items: stretch; gap: 90px; padding: 213px 15px 130px; position: relative;
+  &__info, &__poster { flex: 1; align-content: stretch; }
+  &__info { margin: 100px 0; z-index: 2; }
+  &__poster { border-radius: 12px; }
+  &__arrow { display: inline-block; border-radius: 50%; background-color: $accent; padding: 30px 15px; }
+  &__mark-text { margin: 20px 0; color: $accent; font-size: 1.2rem; }
+  &__person { font-size: 4.3rem; letter-spacing: 2.88px; margin-bottom: 28px; font-weight: 400; }
+  &__description { color: rgba($white, 0.7); font-size: 1.4rem;
+    &-text:first-child { margin-bottom: 33px; }
+  }
+
+  @media (max-width: $tablet) { flex-direction: column; justify-content: center; align-items: center; padding: 100px 15px;
+    &__poster { @include mobile-background-poster; }
+    &__arrow { display: none; }
+    &__info { margin: 0; padding: 0 25px; }
+    &__person { font-size: 2.52rem; }
+    &__mark-text { font-size: 0.9rem; }
+    &__description { font-size: 0.9rem; 
+      &-text:first-child { margin-bottom: 12px; }
+    }
+  }
+}

@@ -10,7 +10,7 @@
 
   @media (max-width: $tablet) { flex-direction: column;
     &__info { padding: 0; }
-    &__poster { position: absolute; top: 0; left: 0; right: 0; bottom: 0; @include image-filter; }
+    &__poster { @include mobile-background-poster; }
     &__episode { color: $white; position: absolute; top: 42px; right: 20px; }
   }
 
