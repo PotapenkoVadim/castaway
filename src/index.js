@@ -71,12 +71,9 @@ errorObserver.subscribe(handleError);
 emailField.addEventListener('keyup', (event) => fieldObserver.broadcast(event));
 nameField.addEventListener('keyup', (event) => fieldObserver.broadcast(event));
 
-const checkFieldNode = (currentField, field) =>
-  currentField === field && currentField.value.length >= 1;
-
 function validateEmptyField(fieldNode) {
   return (event) => {
-    if (checkFieldNode(event.target, fieldNode)) {
+    if (event.target === fieldNode && event.target.value.length >= 1) {
       fieldNode.nextElementSibling.classList.add(ACTIVE_LABEL_CLASSNAME);
     } else {
       fieldNode.nextElementSibling.classList.remove(ACTIVE_LABEL_CLASSNAME);
@@ -86,7 +83,7 @@ function validateEmptyField(fieldNode) {
 
 function validateFieldByBadWords(fieldNode) {
   return (event) => {
-    if (checkFieldNode(event.target, fieldNode)) {
+    if (event.target === fieldNode) {
       const isBadWord = badWordsDic.some((word) =>
         event.target.value.toLowerCase().includes(word.toLowerCase())
       );
