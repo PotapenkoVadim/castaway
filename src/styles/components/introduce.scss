@@ -1,4 +1,4 @@
-.introduce { display: flex; padding-top: 160px; align-items: center;
+.introduce { position: relative; display: flex; padding-top: 160px; align-items: center;
   &__poster, &__info { flex: 1; }
   &__poster { height: 873px; }
   &__title { font-size: 4.6rem; font-weight: 400; }
@@ -6,5 +6,16 @@
   
   &__services { margin: 90px 0;
     &-text { margin-bottom: 15px; }
+  }
+
+  @media (max-width: $tablet) { flex-direction: column; justify-content: center; padding-top: 225px;
+    &__poster { position: absolute; flex: auto; top: 0; left: 0; right: 0; bottom: 0; height: 100%;
+      &-image { filter: grayscale(47%) blur(2px); }
+    }
+
+    &__info { z-index: 2; }
+    &__info-content { padding: 0 15px; }
+    &__title { font-size: 2.2rem; }
+    &__services { margin: 40px 0; }
   }
 }

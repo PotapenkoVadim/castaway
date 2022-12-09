@@ -19,7 +19,8 @@
       &_open { right: 0; }
     }
 
+    &__content { padding: 25px 0; }
     &__mobile-menu { display: block; }
-    &__mobile-close { display: block; position: absolute; top: 42px; right: 15px; }
+    &__mobile-close { display: block; position: absolute; top: 25px; right: 15px; }
   }
 }
