@@ -1,6 +1,7 @@
 /*/ colors /*/
 $black: #000000;
 $background: #191919;
+$error: #FF2020;
 $accent: #118DA8;
 $white: #FFFFFF;
 $white-transparent: rgba($white, 0.7);
@@ -46,4 +47,11 @@ $mobile-small: 360px;
   right: 0;
   bottom: 0;
   @include image-filter;
+}
+
+@mixin active-label {
+  font-size: 0.75rem;
+  color: $accent;
+  top: 10px;
+  left: 15px;
 }

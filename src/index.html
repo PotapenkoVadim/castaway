@@ -192,13 +192,17 @@
 
         <form class="feedback__form form">
           <label class="form__control">
-            <input type="text" class="form__field" required  />
+            <input type="text" class="form__field" required id="name" />
             <span class="form__label">Name</span>
+
+            <span id="nameError" class="form__error"></span>
           </label>
 
           <label class="form__control">
-            <input type="email" class="form__field" required pattern=".+@*\.*" />
+            <input type="email" class="form__field" required id="email" />
             <span class="form__label">Email</span>
+
+            <span id="emailError" class="form__error"></span>
           </label>
 
           <button class="button button_accent">Submit</button>
