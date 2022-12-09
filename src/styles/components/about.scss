@@ -5,7 +5,7 @@
   &__arrow { display: inline-block; border-radius: 50%; background-color: $accent; padding: 30px 15px; }
   &__mark-text { margin: 20px 0; color: $accent; font-size: 1.2rem; }
   &__person { font-size: 4.3rem; letter-spacing: 2.88px; margin-bottom: 28px; font-weight: 400; }
-  &__description { color: rgba($white, 0.7); font-size: 1.4rem;
+  &__description { color: $white-transparent; font-size: 1.4rem;
     &-text:first-child { margin-bottom: 33px; }
   }
 
