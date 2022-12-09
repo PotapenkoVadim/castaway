@@ -1,4 +1,4 @@
-.feedback {
+.feedback { padding-top: 70px; padding-bottom: 155px;
   &__content { background-color: $black; display: flex; padding: 60px; border-radius: 32px; gap: 25px; }
   &__info, &__form { flex: 1; }
   &__subtitle { color: $accent; font-size: 1.2rem; }
