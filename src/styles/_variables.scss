@@ -32,3 +32,7 @@ $mobile: 768px;
   mask-repeat: no-repeat;
   mask-size: contain;
 }
+
+@mixin image-filter {
+  filter: grayscale(55%) blur(2px);
+}

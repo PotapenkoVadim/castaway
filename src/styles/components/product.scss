@@ -1,0 +1,22 @@
+.product { display: flex; align-items: stretch; padding: 40px; background-color: $black;
+  border-radius: 32px; position: relative; overflow: hidden;
+  &:not(:last-child) { margin-bottom: 60px; }
+  &__poster, &__info { flex: 1; align-content: stretch; }
+  &__info { flex: 2; padding-left: 55px; z-index: 2; }
+  &__badges { margin-bottom: 48px; }
+  &__episode { font-size: 1.13rem; color: $accent; margin-bottom: 18px; }
+  &__title { font-size: 4.2rem; letter-spacing: 2.56px; margin-bottom: 28px; }
+  &__description { color: rgba($white, 0.7); font-size: 1.4rem; margin-bottom: 18px; }
+
+  @media (max-width: $tablet) { flex-direction: column;
+    &__info { padding: 0; }
+    &__poster { position: absolute; top: 0; left: 0; right: 0; bottom: 0; @include image-filter; }
+    &__episode { color: $white; position: absolute; top: 42px; right: 20px; }
+  }
+
+  @media (max-width: $mobile) {
+    &:not(:last-child) { margin-bottom: 25px; }
+    &__title { font-size: 2.5rem; letter-spacing: 1px; }
+    &__description { font-size: 1rem; }
+  }
+}

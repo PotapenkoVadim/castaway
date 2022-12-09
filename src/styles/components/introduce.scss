@@ -10,12 +10,12 @@
 
   @media (max-width: $tablet) { flex-direction: column; justify-content: center; padding-top: 225px;
     &__poster { position: absolute; flex: auto; top: 0; left: 0; right: 0; bottom: 0; height: 100%;
-      &-image { filter: grayscale(47%) blur(2px); }
+      &-image { @include image-filter; }
     }
 
     &__info { z-index: 2; }
     &__info-content { padding: 0 15px; }
-    &__title { font-size: 2.2rem; }
+    &__title { font-size: 2.52rem; }
     &__services { margin: 40px 0; }
   }
 }

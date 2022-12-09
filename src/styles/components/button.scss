@@ -1,0 +1,5 @@
+.button { outline: none; padding: 14px 20px; border-radius: 6px; border: none; font-size: 1.13rem; cursor: pointer;
+  &_accent { background-color: $accent; color: $white; }
+
+  &:active { box-shadow: inset 1px 1px 7px 3px $background; }
+}
