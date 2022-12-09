@@ -1,11 +1,14 @@
-.icon { display: block; background-size: contain; background-repeat: no-repeat; background-position: center; width: 32px; height: 32px;
+.icon { display: block; width: 32px; height: 32px; @include common-background-image; @include common-mask-image;
   &__spotify { background-image: url(../static/images/spotify.svg); }
   &__bx { background-image: url(../static/images/bx.svg); }
   &__orange-cloud { background-image: url(../static/images/orange-cloud.svg); }
   &__mic { background-image: url(../static/images/mic.svg); }
   &__tower { background-image: url(../static/images/tower.svg); }
 
-  // &_white { background-color: $white; }
-  // &_black { background-color: $black; }
-  // &_coral { background-color: $coral; }
+  &__close { mask-image: url(../static/images/close.svg); }
+  &__menu { mask-image: url(../static/images/menu.svg); }
+
+  &_white { background-color: $white; }
+  &_black { background-color: $black; }
+  &_accent { background-color: $accent; }
 } 

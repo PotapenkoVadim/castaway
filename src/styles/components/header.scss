@@ -1,8 +1,25 @@
 .header { position: fixed; background: linear-gradient(0deg, rgba($background, 0.5) 40%, rgba($background, 0.99)); width: 100%; z-index: 10;
+  padding: 0 12px;
   &__content { @include container; display: flex; justify-content: space-between; align-items: center; padding: 43px 0; }
   &__logo-container { width: 160px; height: 33px; }
   
   &__poster { display: block;
     &-image { object-fit: contain; }
+  }
+
+  &__mobile-menu, &__mobile-close { display: none; }
+
+  @media (max-width: $tablet) {
+    &__navigation { position: fixed; top: 0; right: -100%; height: 100%; width: 100%; background-color: $background;
+      display: flex; align-items: center; justify-content: center; @include common-transition;
+
+      &-list { flex-direction: column; align-items: center; }
+      &-link { font-size: 1.5rem !important; }
+
+      &_open { right: 0; }
+    }
+
+    &__mobile-menu { display: block; }
+    &__mobile-close { display: block; position: absolute; top: 42px; right: 15px; }
   }
 }
