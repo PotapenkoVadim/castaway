@@ -36,13 +36,15 @@ mobileCloseIcon.addEventListener('click', () => {
   mobileNavigation.classList.remove(ACTIVE_MOBILE_MENU_CLASSNAME);
 });
 
-[...mobileNavigationList.children].map(linkNode => (
+[...mobileNavigationList.children].map((linkNode) =>
   linkNode.addEventListener('click', () => {
-    if ([...mobileNavigation.classList].includes(ACTIVE_MOBILE_MENU_CLASSNAME)) {
+    if (
+      [...mobileNavigation.classList].includes(ACTIVE_MOBILE_MENU_CLASSNAME)
+    ) {
       mobileNavigation.classList.remove(ACTIVE_MOBILE_MENU_CLASSNAME);
     }
   })
-));
+);
 
 // ===> <=== //
 const ACTIVE_LABEL_CLASSNAME = 'form__label_active';
