@@ -22,6 +22,11 @@ module.exports = (env, argv) => {
       filename: isDev ? '[name].js' : '[contenthash].js',
       assetModuleFilename: isDev ? 'assets/[name][ext]' : 'assets/[hash][ext]'
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
+    },
     resolve: {
       extensions: ['.js']
     },
