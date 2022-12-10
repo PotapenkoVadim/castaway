@@ -1,6 +1,6 @@
 {
   "name": "castaway-project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "homepage": "https://potapenkovadim.github.io/castaway",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
     "prepare": "husky install",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
   "author": "PotapenkoVadim",
