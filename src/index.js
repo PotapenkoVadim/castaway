@@ -26,6 +26,7 @@ const ACTIVE_MOBILE_MENU_CLASSNAME = 'header__navigation_open';
 const mobileMenu = document.getElementById('mobileMenu');
 const mobileCloseIcon = document.getElementById('mobileCloseIcon');
 const mobileNavigation = document.getElementById('mobileNavigation');
+const mobileNavigationList = document.getElementById('mobileNavigationList');
 
 mobileMenu.addEventListener('click', () => {
   mobileNavigation.classList.toggle(ACTIVE_MOBILE_MENU_CLASSNAME);
@@ -34,6 +35,14 @@ mobileMenu.addEventListener('click', () => {
 mobileCloseIcon.addEventListener('click', () => {
   mobileNavigation.classList.remove(ACTIVE_MOBILE_MENU_CLASSNAME);
 });
+
+[...mobileNavigationList.children].map(linkNode => (
+  linkNode.addEventListener('click', () => {
+    if ([...mobileNavigation.classList].includes(ACTIVE_MOBILE_MENU_CLASSNAME)) {
+      mobileNavigation.classList.remove(ACTIVE_MOBILE_MENU_CLASSNAME);
+    }
+  })
+));
 
 // ===> <=== //
 const ACTIVE_LABEL_CLASSNAME = 'form__label_active';
